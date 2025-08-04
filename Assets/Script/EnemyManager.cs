@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class EnemyManager : MonoBehaviour
 {
     private float moveSpeed = 40.0f;
     public AudioClip enemySound;
