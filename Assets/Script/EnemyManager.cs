@@ -5,6 +5,9 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     private float moveSpeed = 40.0f;
+    public AudioClip enemySound;
+
+    private AudioSource audioSource;
 
     public GameObject bulletPrefab;
     public GameObject firingPosition;
@@ -12,6 +15,7 @@ public class NewBehaviourScript : MonoBehaviour
     //EnemyÇ™ê∂ê¨Ç≥ÇÍÇΩÇÁíeÇî≠éÀÇ∑ÇÈÇÊÇ§Ç…Ç∑ÇÈ
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         Shot();
     }
 
@@ -29,5 +33,6 @@ public class NewBehaviourScript : MonoBehaviour
     private void Shot()
     {
         Instantiate(bulletPrefab, firingPosition.transform.transform.position,Quaternion.Euler(90.0f, 0.0f, 0.0f));//âÒì]
+        audioSource.PlayOneShot(enemySound);
     }
 }
