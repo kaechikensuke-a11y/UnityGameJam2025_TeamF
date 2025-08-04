@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2081798418021934392}
   - component: {fileID: 3554207499561435850}
   - component: {fileID: 8214067396844585701}
-  - component: {fileID: 3447499793829681193}
+  - component: {fileID: -3910908059719519659}
   m_Layer: 0
   m_Name: Enemy_Bullet
   m_TagString: Untagged
@@ -128,30 +128,15 @@ CapsuleCollider:
   m_Height: 103.33487
   m_Direction: 1
   m_Center: {x: -0.011525214, y: 50.537704, z: 0.046635848}
---- !u!54 &3447499793829681193
-Rigidbody:
+--- !u!114 &-3910908059719519659
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504688255716329733}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d9f1f3058452654d91a6e079a29b9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

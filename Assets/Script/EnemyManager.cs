@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    private float moveSpeed = 10.0f;
+    private float moveSpeed = 40.0f;
 
     public GameObject bulletPrefab;
     public GameObject firingPosition;
@@ -28,6 +28,6 @@ public class NewBehaviourScript : MonoBehaviour
 
     private void Shot()
     {
-        Instantiate(bulletPrefab,firingPosition.transform.transform.position,transform.rotation)
+        Instantiate(bulletPrefab, firingPosition.transform.transform.position,Quaternion.Euler(90.0f, 0.0f, 0.0f));//‰ñ“]
     }
 }
