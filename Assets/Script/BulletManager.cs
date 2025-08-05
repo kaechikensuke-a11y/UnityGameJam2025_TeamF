@@ -15,6 +15,6 @@ public class BulletManager : MonoBehaviour
     // Update is called once per frame
     private void Move()
     {
-        transform.position += new Vector3(0, 0,-bulletSpeed) * Time.deltaTime; 
+        transform.position += new Vector3(-bulletSpeed, 0,0) * Time.deltaTime; 
     }
 }

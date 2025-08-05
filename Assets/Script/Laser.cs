@@ -14,6 +14,6 @@ public class Laser : MonoBehaviour
     //ƒoƒŒƒbƒg‚ð”ò‚Î‚·
     private void Move()
     {
-        transform.position += new Vector3(0,0,bulletSpeed) * Time.deltaTime;
+        transform.position += new Vector3(bulletSpeed, 0,0) * Time.deltaTime;
     }
 }
