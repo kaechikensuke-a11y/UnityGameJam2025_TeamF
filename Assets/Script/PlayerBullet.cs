@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Laser : MonoBehaviour
+public class PlayerBullet : MonoBehaviour
 {
     private float bulletSpeed = 100.0f;
 
@@ -23,6 +23,15 @@ public class Laser : MonoBehaviour
         if(this.transform.position.x > 165.0f)
         {
             Destroy(this.gameObject);
+        }
+    }
+    //敵にぶつかるとHPが減るコードを記入
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(this.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }

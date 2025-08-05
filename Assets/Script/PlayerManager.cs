@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using UnityEditor;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
     public GameObject Gameclear;
     private float speed = 60.0f;//ˆÚ“®‘¬“x

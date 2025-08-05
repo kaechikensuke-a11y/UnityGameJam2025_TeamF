@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletManager : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
     // Start is called before the first frame update
     private int bulletSpeed = 80;
@@ -24,6 +24,15 @@ public class BulletManager : MonoBehaviour
         if(this.transform.position.x < -180.0f )
         {
             Destroy(this.gameObject);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(!collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(this.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }
