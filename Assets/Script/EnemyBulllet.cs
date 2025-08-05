@@ -10,11 +10,20 @@ public class BulletManager : MonoBehaviour
     private void Update()
     {
         Move();
+        Offscreen();
     }
 
     // Update is called once per frame
     private void Move()
     {
-        transform.position += new Vector3(-bulletSpeed, 0,0) * Time.deltaTime; 
+        transform.position += new Vector3(-bulletSpeed, 0,0) * Time.deltaTime;
+    }
+
+    private void Offscreen()
+    {
+        if(this.transform.position.x < -180.0f )
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
