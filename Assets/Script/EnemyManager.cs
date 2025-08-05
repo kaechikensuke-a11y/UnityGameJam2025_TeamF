@@ -27,12 +27,12 @@ public class EnemyManager : MonoBehaviour
     //BulletÇç∂Ç…ìÆÇ©Ç∑
     private void Move()
     {
-        transform.position += new Vector3(0, 0, -moveSpeed) * Time.deltaTime;
+        transform.position += new Vector3(-moveSpeed, 0, 0) * Time.deltaTime;
     }
 
     private void Shot()
     {
-        Instantiate(bulletPrefab, firingPosition.transform.transform.position,Quaternion.Euler(90.0f, 0.0f, 0.0f));//âÒì]
+        Instantiate(bulletPrefab, firingPosition.transform.transform.position,Quaternion.Euler(0.0f, 0.0f, 90.0f));//âÒì]
         audioSource.PlayOneShot(enemySound);
     }
 }

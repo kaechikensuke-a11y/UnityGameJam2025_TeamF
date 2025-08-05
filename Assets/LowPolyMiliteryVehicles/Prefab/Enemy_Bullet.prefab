@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2081798418021934392}
   - component: {fileID: 3554207499561435850}
   - component: {fileID: 8214067396844585701}
-  - component: {fileID: -3910908059719519659}
+  - component: {fileID: -5767627967591927458}
   m_Layer: 0
   m_Name: Enemy_Bullet
   m_TagString: Untagged
@@ -128,7 +128,7 @@ CapsuleCollider:
   m_Height: 103.33487
   m_Direction: 1
   m_Center: {x: -0.011525214, y: 50.537704, z: 0.046635848}
---- !u!114 &-3910908059719519659
+--- !u!114 &-5767627967591927458
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
