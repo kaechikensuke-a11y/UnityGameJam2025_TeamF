@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6169372699173414327}
   - component: {fileID: 8830088910004106644}
   - component: {fileID: 5353931009361329089}
+  - component: {fileID: 6657696419482019619}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 378564676248832959}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.030738, y: 0.85698, z: 0.47648}
+  m_LocalScale: {x: 0.74207115, y: 0.74207115, z: 0.74207115}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3648450833342522112}
@@ -49,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySound: {fileID: 8300000, guid: 942a0e5f3f0af2c41bf75f91c511c038, type: 3}
+  Death: {fileID: 8300000, guid: 504d9aaaf5cac6e46847ead079ab2b81, type: 3}
   bulletPrefab: {fileID: 504688255716329733, guid: c820a4c0bb7258d4a9b68bb13f272000, type: 3}
   firingPosition: {fileID: 9202465004973663766}
 --- !u!65 &8830088910004106644
@@ -66,12 +68,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 52.409733, y: 3.7659836, z: 21.57674}
-  m_Center: {x: 0.22044182, y: 2.9817238, z: -1.6306233}
+  m_Size: {x: 52.409733, y: 11.773472, z: 21.57674}
+  m_Center: {x: 0.22044182, y: 3.322382, z: -1.6306238}
 --- !u!82 &5353931009361329089
 AudioSource:
   m_ObjectHideFlags: 0
@@ -168,6 +170,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!54 &6657696419482019619
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378564676248832959}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &3617105694366957795
 PrefabInstance:
   m_ObjectHideFlags: 0

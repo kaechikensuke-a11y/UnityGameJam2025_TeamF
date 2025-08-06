@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    private float moveSpeed = 40.0f;
+    private float moveSpeed = 60.0f;
     public AudioClip enemySound;
+    public AudioClip Death;
 
     private AudioSource audioSource;
 
@@ -23,6 +24,7 @@ public class EnemyManager : MonoBehaviour
     void Update()
     {
         Move();
+        Offscreen();
     }
     //BulletÇç∂Ç…ìÆÇ©Ç∑
     private void Move()
@@ -34,5 +36,14 @@ public class EnemyManager : MonoBehaviour
     {
         Instantiate(bulletPrefab, firingPosition.transform.transform.position,Quaternion.Euler(0.0f, 0.0f, 90.0f));//âÒì]
         audioSource.PlayOneShot(enemySound);
+    }
+
+    private void Offscreen()
+    {
+        if (this.transform.position.x < -180.0f)
+        {
+            Destroy(this.gameObject);
+            audioSource.PlayOneShot(Death);
+        }
     }
 }

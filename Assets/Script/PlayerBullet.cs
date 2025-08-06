@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
     private float bulletSpeed = 100.0f;
+    public AudioClip Death;
+    private AudioSource audioSource;
 
     // Update is called once per frame
     void Update()
@@ -15,7 +17,7 @@ public class PlayerBullet : MonoBehaviour
     //バレットを飛ばす
     private void Move()
     {
-        transform.position += new Vector3(bulletSpeed, 0,0) * Time.deltaTime;
+        transform.position += new Vector3(bulletSpeed, 0.0f,0.0f) * Time.deltaTime;
     }
     //弾が画面外に出たら消すたま
     private void Offscreen()
@@ -25,13 +27,14 @@ public class PlayerBullet : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    //敵にぶつかるとHPが減るコードを記入
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (!collision.gameObject.CompareTag("Player"))
+        if (!other.CompareTag("Player"))
         {
-            Destroy(this.gameObject);
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject); // 敵を消す
+            Destroy(gameObject);       // 弾も消す
+            audioSource.PlayOneShot(Death);
         }
     }
 }

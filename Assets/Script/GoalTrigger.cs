@@ -53,7 +53,7 @@ public class GoalTrigger : MonoBehaviour
         //audioSource.Play();
 
         // 5•b‘Ò‚Â
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(1f);
 
         // ƒV[ƒ“‚ğÄ“Ç‚İ‚İ‚µ‚ÄÅ‰‚©‚ç‚â‚è’¼‚·
         SceneManager.LoadScene("GameClear");

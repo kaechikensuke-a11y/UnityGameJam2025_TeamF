@@ -12,10 +12,12 @@ GameObject:
   - component: {fileID: 8418484976537758719}
   - component: {fileID: 3312857702428644903}
   - component: {fileID: 7428072849856724712}
-
+  - component: {fileID: 5511514648097057670}
+  - component: {fileID: -4261558979569138099}
+  - component: {fileID: -8431339651682225798}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +106,6 @@ MonoBehaviour:
   m_lineColor: {r: 0, g: 1, b: 1, a: 1}
   m_lineWidth: 20
   m_lightSaberFactor: 0.8
-
 --- !u!136 &5511514648097057670
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -120,7 +121,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -128,7 +129,34 @@ CapsuleCollider:
   m_Height: 111.95819
   m_Direction: 1
   m_Center: {x: 0, y: 50.64579, z: 0.014791042}
-
+--- !u!54 &-4261558979569138099
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5574981324860299775}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &-8431339651682225798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,3 +168,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65cf5e4ab0aa9d4e823442ebc2b7ff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Death: {fileID: 0}

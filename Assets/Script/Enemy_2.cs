@@ -1,0 +1,50 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class enemy_2 : MonoBehaviour
+{
+    private float moveSpeed = 40.0f;
+    public AudioClip enemySound;
+
+    private AudioSource audioSource;
+
+    public GameObject bulletPrefab;
+    public GameObject firingPosition;
+    
+    //EnemyÇ™ê∂ê¨Ç≥ÇÍÇΩÇÁíeÇî≠éÀÇ∑ÇÈÇÊÇ§Ç…Ç∑ÇÈ
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        InvokeRepeating("Shot", 1.0f, 1.5f);
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Move();
+        Offscreen();
+    }
+    //BulletÇç∂Ç…ìÆÇ©Ç∑
+    private void Move()
+    {
+        transform.position += new Vector3(-moveSpeed, 0, 0) * Time.deltaTime;
+    }
+
+    private void Shot()
+    {
+        Instantiate(bulletPrefab, firingPosition.transform.transform.position,Quaternion.Euler(0.0f, 0.0f, 90.0f));//âÒì]
+        audioSource.PlayOneShot(enemySound);
+    }
+
+    private void Offscreen()
+    {
+        if (this.transform.position.x < -180.0f)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+}
+
