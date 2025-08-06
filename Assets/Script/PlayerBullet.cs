@@ -25,13 +25,13 @@ public class PlayerBullet : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    //“G‚É‚Ô‚Â‚©‚é‚ÆHP‚ªŒ¸‚éƒR[ƒh‚ğ‹L“ü
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (!collision.gameObject.CompareTag("Player"))
+        if (!other.CompareTag("Player"))
         {
-            Destroy(this.gameObject);
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject); // “G‚ğÁ‚·
+            Destroy(gameObject);       // ’e‚àÁ‚·
         }
     }
 }

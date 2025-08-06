@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3554207499561435850}
   - component: {fileID: 8214067396844585701}
   - component: {fileID: -5767627967591927458}
+  - component: {fileID: 8895436870245267465}
   m_Layer: 0
   m_Name: Enemy_Bullet
   m_TagString: Enemy
@@ -140,3 +141,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d9f1f3058452654d91a6e079a29b9f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &8895436870245267465
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504688255716329733}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
