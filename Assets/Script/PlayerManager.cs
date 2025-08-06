@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -85,6 +86,7 @@ public class PlayerManager : MonoBehaviour
         if(lifePoint <= 0)
         {
             Debug.Log("ゲームオーバー");
+            SceneManager.LoadScene("GameOver");
         }
     }
     private void OnTriggerEnter(Collider other)

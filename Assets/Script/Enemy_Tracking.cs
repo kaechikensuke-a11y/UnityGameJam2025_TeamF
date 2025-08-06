@@ -2,13 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Tracking: MonoBehaviour
+public class Enemy_Tracking : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
-    [SerializeField] private int moveSpeed;
- 
+    private float moveSpeed = 40.0f;
+   
+
+    //Enemy‚ª¶¬‚³‚ê‚½‚ç’e‚ğ”­Ë‚·‚é‚æ‚¤‚É‚·‚é
+    private void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
+        Move();
     }
+    //Bullet‚ğ¶‚É“®‚©‚·
+    private void Move()
+    {
+        transform.position += new Vector3(-moveSpeed, 0, 0) * Time.deltaTime;
+    }
+
+   
 }
