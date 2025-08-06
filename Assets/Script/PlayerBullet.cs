@@ -15,7 +15,7 @@ public class PlayerBullet : MonoBehaviour
     //バレットを飛ばす
     private void Move()
     {
-        transform.position += new Vector3(bulletSpeed, 0,0) * Time.deltaTime;
+        transform.position += new Vector3(bulletSpeed, 0.0f,0.0f) * Time.deltaTime;
     }
     //弾が画面外に出たら消すたま
     private void Offscreen()

@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 8418484976537758719}
   - component: {fileID: 3312857702428644903}
   - component: {fileID: 7428072849856724712}
-
+  - component: {fileID: 5511514648097057670}
+  - component: {fileID: -4152078354074086977}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +105,6 @@ MonoBehaviour:
   m_lineColor: {r: 0, g: 1, b: 1, a: 1}
   m_lineWidth: 20
   m_lightSaberFactor: 0.8
-
 --- !u!136 &5511514648097057670
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -120,7 +120,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -128,7 +128,7 @@ CapsuleCollider:
   m_Height: 111.95819
   m_Direction: 1
   m_Center: {x: 0, y: 50.64579, z: 0.014791042}
-
+--- !u!114 &-4152078354074086977
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

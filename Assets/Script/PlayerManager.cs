@@ -14,12 +14,17 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject bulletPrefab;
     public GameObject firingPosition;
+    public GameObject[]lifeArray=new GameObject[3];
+    private int lifePoint = 3;
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        for (int i = 0; i < lifeArray.Length; i++)
+        {
+            lifeArray[i].SetActive(true);
+        }
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -67,6 +72,26 @@ public class PlayerManager : MonoBehaviour
         if(collision.gameObject.CompareTag("Goal"))
         {
             Gameclear.SetActive(true);
+        }
+    }
+
+    public void DecreaseLife()
+    {
+        if (lifePoint > 0)
+        {
+            lifePoint--;
+            lifeArray[lifePoint].SetActive(false);
+        }
+        if(lifePoint <= 0)
+        {
+            Debug.Log("ゲームオーバー");
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            DecreaseLife();
         }
     }
 }
