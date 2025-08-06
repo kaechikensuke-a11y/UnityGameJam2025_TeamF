@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
     private float bulletSpeed = 100.0f;
+    public AudioClip Death;
+    private AudioSource audioSource;
 
     // Update is called once per frame
     void Update()
@@ -32,6 +34,7 @@ public class PlayerBullet : MonoBehaviour
         {
             Destroy(other.gameObject); // ìGÇè¡Ç∑
             Destroy(gameObject);       // íeÇ‡è¡Ç∑
+            audioSource.PlayOneShot(Death);
         }
     }
 }

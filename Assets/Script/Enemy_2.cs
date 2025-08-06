@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyManager : MonoBehaviour
+public class enemy_2 : MonoBehaviour
 {
-    private float moveSpeed = 60.0f;
+    private float moveSpeed = 40.0f;
     public AudioClip enemySound;
-    public AudioClip Death;
 
     private AudioSource audioSource;
 
@@ -17,7 +16,9 @@ public class EnemyManager : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        Shot();
+        InvokeRepeating("Shot", 1.0f, 1.5f);
+
+
     }
 
     // Update is called once per frame
@@ -43,7 +44,7 @@ public class EnemyManager : MonoBehaviour
         if (this.transform.position.x < -180.0f)
         {
             Destroy(this.gameObject);
-            audioSource.PlayOneShot(Death);
         }
     }
 }
+

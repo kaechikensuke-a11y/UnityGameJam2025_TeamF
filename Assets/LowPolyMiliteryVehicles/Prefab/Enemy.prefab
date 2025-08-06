@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 378564676248832959}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.030738, y: 0.85698, z: 0.47648}
+  m_LocalScale: {x: 0.74207115, y: 0.74207115, z: 0.74207115}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3648450833342522112}
@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySound: {fileID: 8300000, guid: 942a0e5f3f0af2c41bf75f91c511c038, type: 3}
+  Death: {fileID: 8300000, guid: 504d9aaaf5cac6e46847ead079ab2b81, type: 3}
   bulletPrefab: {fileID: 504688255716329733, guid: c820a4c0bb7258d4a9b68bb13f272000, type: 3}
   firingPosition: {fileID: 9202465004973663766}
 --- !u!65 &8830088910004106644

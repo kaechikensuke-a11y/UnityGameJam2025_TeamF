@@ -2,21 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Spawn : MonoBehaviour
+public class Enemy_Spawn3 : MonoBehaviour
 {
 
     public GameObject enemyPrefab;
     // Start is called before the first frame update
     void Start()
     {
-        //Spwan‚ğ2•bŠÔŠu‚Å¶¬‚³‚¹‚é
-        InvokeRepeating("Spawn",1.0f,2.0f);
+        //Spwan‚ğ3•bŠÔŠu‚Å¶¬‚³‚¹‚é
+        InvokeRepeating("Spawn", 1.0f, 5.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     //ƒ‰ƒ“ƒ_ƒ€‚É“G‚ğ¶¬‚³‚¹‚é
@@ -28,7 +28,7 @@ public class Enemy_Spawn : MonoBehaviour
         float fixedZ = 110.0f;
         Vector3 spawnPos = new Vector3(fixedX, randomY, fixedZ);
 
-      //  Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        //  Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
 
         Quaternion enemyRotation = Quaternion.LookRotation(Vector3.left);
 
@@ -38,3 +38,5 @@ public class Enemy_Spawn : MonoBehaviour
 
     }
 }
+
+
